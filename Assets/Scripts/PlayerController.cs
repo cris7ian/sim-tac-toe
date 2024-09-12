@@ -71,13 +71,8 @@ public class PlayerController : MonoBehaviour
         if (isGrounded)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            isGrounded = false; // Set isGrounded to false when jumping
+            //isGrounded = false; // Set isGrounded to false when jumping
         }
-    }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        isGrounded = true; // Set isGrounded to true when colliding with the ground
     }
 
     void OnTriggerEnter(Collider other)

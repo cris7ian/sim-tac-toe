@@ -27,27 +27,26 @@ public class TicTacToe
         {
             return false; // Invalid move
         }
-
         board[row, col] = currentPlayer;
         return true;
     }
 
     // Check if there is a winner
-    public bool CheckWin(char currentPlayer)
+    public bool CheckWin(char player)
     {
         // Check rows, columns, and diagonals
         for (int i = 0; i < 3; i++)
         {
-            if (board[i, 0] == currentPlayer && board[i, 1] == currentPlayer && board[i, 2] == currentPlayer)
+            if (board[i, 0] == player && board[i, 1] == player && board[i, 2] == player)
                 return true;
-            if (board[0, i] == currentPlayer && board[1, i] == currentPlayer && board[2, i] == currentPlayer)
+            if (board[0, i] == player && board[1, i] == player && board[2, i] == player)
                 return true;
         }
 
-        if (board[0, 0] == currentPlayer && board[1, 1] == currentPlayer && board[2, 2] == currentPlayer)
+        if (board[0, 0] == player && board[1, 1] == player && board[2, 2] == player)
             return true;
 
-        if (board[0, 2] == currentPlayer && board[1, 1] == currentPlayer && board[2, 0] == currentPlayer)
+        if (board[0, 2] == player && board[1, 1] == player && board[2, 0] == player)
             return true;
 
         return false;
@@ -55,6 +54,7 @@ public class TicTacToe
 
     public char Winner()
     {
+
         if (CheckWin('x'))
         {
             return 'x';

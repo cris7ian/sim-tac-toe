@@ -10,8 +10,6 @@ public class CellController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         GameObject parentObject = other.gameObject.transform.parent ? other.gameObject.transform.parent.gameObject : other.gameObject;
-        Debug.Log(parentObject.tag);
-
         if (parentObject.CompareTag("x_piece"))
         {
             BoardController.game.SetPosition(row, column, 'x');
