@@ -7,6 +7,7 @@ TagManager:
   - x_piece
   - o_piece
   - ground
+  - cell
   layers:
   - Default
   - TransparentFX

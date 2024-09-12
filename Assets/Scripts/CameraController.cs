@@ -8,7 +8,7 @@ using UnityEngine.UIElements;
 public class CameraController : MonoBehaviour
 {
     public GameObject player;
-    private  Quaternion initialRotation;
+    private Quaternion initialRotation;
     private float initialFOV;
     private Vector3 offset;    // Start is called before the first frame update\
     public float trackingSpeed = 3.0f;
@@ -18,14 +18,16 @@ public class CameraController : MonoBehaviour
         initialRotation = transform.rotation;
         initialFOV = Camera.main.fieldOfView;
     }
-    
+
     // Update is called once per frame
     void LateUpdate()
     {
         if (isPlayerActive())
         {
             lookAtPlayer();
-        } else {
+        }
+        else
+        {
             resetCamera();
         }
     }
@@ -40,7 +42,7 @@ public class CameraController : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, initialRotation, trackingSpeed * Time.deltaTime);
         Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, 60f, zoomingSpeed * Time.deltaTime);
     }
-    
+
     private void lookAtPlayer()
     {
         Vector3 direction = PlayerController.activePlayer.transform.position - transform.position;

@@ -27,12 +27,14 @@ public class PlayerController : MonoBehaviour
         playerInput.enabled = false;
     }
 
-    void OnMouseOver() {
+    void OnMouseOver()
+    {
         if (playerInput.enabled) return;
         hovereded = true;
     }
 
-    void OnMouseExit() {
+    void OnMouseExit()
+    {
         hovereded = false;
         marker.SetActive(false);
     }
@@ -57,7 +59,8 @@ public class PlayerController : MonoBehaviour
         movementY = movementVector.y;
     }
 
-    void OnReset() {
+    void OnReset()
+    {
         playerInput.enabled = false;
         activePlayer = null;
     }
@@ -84,7 +87,8 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (hovereded) {
+        if (hovereded)
+        {
             marker.SetActive(true);
             marker.transform.position = transform.position;
         }
