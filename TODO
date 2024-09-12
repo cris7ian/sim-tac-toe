@@ -1,0 +1,16 @@
+
+Todo:
+  ☐ Check exit logic in board cells
+  ☐ Add celebration particles
+  ☐ Escape menu
+    ☐ Show instructions
+    ☐ Resume
+  ☐ Export to the web, if possible
+
+
+'Cmd/Ctrl+Enter' // Triggers `Todo: Toggle Box`
+'Alt+Enter' // Triggers `Todo: Toggle Box`
+'Alt+D' // Triggers `Todo: Toggle Done`
+'Alt+C' // Triggers `Todo: Toggle Cancelled`
+'Alt+S' // Triggers `Todo: Toggle Start`
+'Cmd/Ctrl+Shift+A' // Triggers  `Todo: Archive`
