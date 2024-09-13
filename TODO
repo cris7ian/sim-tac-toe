@@ -1,7 +1,7 @@
 
 Todo:
-  ☐ Check exit logic in board cells
-  ☐ Add celebration particles
+  ✔ Check exit logic in board cells @done(24-09-13 14:31)
+  ✔ Add celebration particles @done(24-09-13 14:31)
   ✔ Show instructions @done(24-09-13 13:04)
   ☐ Export to the web, if possible
 

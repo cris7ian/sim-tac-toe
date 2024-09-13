@@ -5,6 +5,7 @@ using UnityEngine;
 public class BoardController : MonoBehaviour
 {
     public static TicTacToe game = new TicTacToe();
+    public GameObject confetti;
     private AudioSource victorySound;
     private AudioSource backgroundMusic;
     private bool won = false;
@@ -13,6 +14,7 @@ public class BoardController : MonoBehaviour
     {
         victorySound = GetComponents<AudioSource>()[0];
         backgroundMusic = GetComponents<AudioSource>()[1];
+        confetti.GetComponent<ParticleSystem>().Stop();
     }
 
     // Update is called once per frame
@@ -20,6 +22,7 @@ public class BoardController : MonoBehaviour
     {
         if (game.Winner() != '-' && !won)
         {
+            confetti.GetComponent<ParticleSystem>().Play();
             victorySound.Play();
             StartCoroutine(FadeOut(backgroundMusic, 1));
             Debug.Log("Winner is " + game.Winner());
