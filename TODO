@@ -2,9 +2,7 @@
 Todo:
   ☐ Check exit logic in board cells
   ☐ Add celebration particles
-  ☐ Escape menu
-    ☐ Show instructions
-    ☐ Resume
+  ✔ Show instructions @done(24-09-13 13:04)
   ☐ Export to the web, if possible
 
 
