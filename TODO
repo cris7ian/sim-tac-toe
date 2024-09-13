@@ -3,7 +3,7 @@ Todo:
   ✔ Check exit logic in board cells @done(24-09-13 14:31)
   ✔ Add celebration particles @done(24-09-13 14:31)
   ✔ Show instructions @done(24-09-13 13:04)
-  ☐ Export to the web, if possible
+  ✔ Export to the web, if possible @done(24-09-13 16:11)
 
 
 'Cmd/Ctrl+Enter' // Triggers `Todo: Toggle Box`
